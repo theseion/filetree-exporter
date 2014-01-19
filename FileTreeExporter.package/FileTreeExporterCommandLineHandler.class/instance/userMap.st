@@ -1,11 +1,12 @@
 accessing
 userMap
-	| file map |
+	| file |
+	userMap ifNotNil: [ ^ userMap ].
 	file := self userMapFile.
-	map := Dictionary new.
+	userMap := Dictionary new.
 	file readStream contents linesDo: [ :line | | tokens monticelloAuthor gitAuthor |
 		tokens := line splitOn: [ :each | each isSeparator ].
 		monticelloAuthor := tokens first.
 		gitAuthor := tokens allButFirst joinUsing: ' '.
-		map at: monticelloAuthor put: gitAuthor ].
-	^ map
+		userMap at: monticelloAuthor put: gitAuthor ].
+	^ userMap

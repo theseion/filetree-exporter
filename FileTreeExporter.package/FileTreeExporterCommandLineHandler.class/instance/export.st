@@ -1,9 +1,12 @@
 action-export
 export
-	| userMap versions destination |
-	userMap := self userMap.
-	self inform: 'Fetching '.
+	| versions destination |
+	"initialize the lazy user map"
+	self userMap.
+	destination := self prepareLocalDestinationRepository.
 	versions := self monticelloVersions 
 		asSortedCollection: self mcVersionDateComparisonBlock.
-	destination := self prepareLocalDestinationRepository.
+	versions withIndexDo: [ :version :index | 
+		self printCommit: version from: index to: versions size.
+		self exportVersion: version to: destination ].
 	self halt.

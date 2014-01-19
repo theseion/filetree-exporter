@@ -8,9 +8,9 @@ monticelloVersions
 	self stderr lf; flush.
 	
 	goferVersions withIndexDo: [ :each :index |
-		self stderr startOfLine; clearToEnd; yellow; 
-			<< 'Fetching Monticello All Versions: [';
-			print: goferVersions size; << '/'; print: index; << ']';
-			clear.
+		self
+			printProgressMessage: 'Fetching Monticello All Versions:' 
+			from: index
+			to: goferVersions size.
 		versions at: index put: each version ].
 	^ versions

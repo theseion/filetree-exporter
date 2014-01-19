@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "CamilloBruni 1/19/2014 19:37",
 	"instvars" : [
-		"gofer" ],
+		"gofer",
+		"userMap" ],
 	"name" : "FileTreeExporterCommandLineHandler",
 	"pools" : [
 		 ],
