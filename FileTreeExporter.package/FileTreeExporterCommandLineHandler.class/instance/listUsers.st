@@ -1,4 +1,4 @@
-actions
+action-users
 listUsers
 	| gofer repository allVersions users |
 	"print the list of all uesrs of the given source repository"
