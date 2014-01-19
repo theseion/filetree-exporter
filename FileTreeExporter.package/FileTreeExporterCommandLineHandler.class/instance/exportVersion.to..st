@@ -13,5 +13,5 @@ exportVersion: version to: destination
 	destination storeVersion: version.
 	"git commit"
 	result := OSProcess waitForCommand: ('cd "', destination directory fullName,'" && ',
-		'git add * && ',
-		'git commit --all --allow-empty-message --allow-empty --author="', gitUser, '" --file="', commitFile fullName, '"')
+		'git add --all * && ',
+		'git commit --allow-empty-message --allow-empty --author="', gitUser, '" --file="', commitFile fullName, '" --date="', version info timeStamp asString,'"')
