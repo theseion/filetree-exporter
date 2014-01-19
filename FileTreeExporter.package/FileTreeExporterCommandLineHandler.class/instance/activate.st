@@ -1,12 +1,18 @@
 activation
 activate
+	| subCommand |
 	self activateHelp
 		ifTrue: [  ^ self ].
 	
-	(self arguments first = 'users')
+	subCommand := self arguments first.
+	
+	(subCommand = 'users')
 		ifTrue: [ ^ self listUsers ].
 		
-	(self arguments first = 'export')
+	(subCommand = 'packages')
+		ifTrue: [ ^ self listPackages].
+		
+	(subCommand = 'export')
 		ifTrue: [ ^ self export ].
 	
 	self error: 'Invalid subcommand provided'

@@ -14,3 +14,5 @@ export
 			to: versions size.	
 		self stderr lf.
 		self exportVersion: version to: destination ].
+	
+	self exitSuccess.
