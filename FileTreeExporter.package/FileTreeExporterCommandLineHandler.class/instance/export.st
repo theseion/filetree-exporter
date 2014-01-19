@@ -11,7 +11,6 @@ export
 		self
 			printProgressMessage: ('Exporting ', version info name)
 			from: index
-			to: versions size.
+			to: versions size.	
+		self stderr lf.
 		self exportVersion: version to: destination ].
-	
-	self stderr lf
