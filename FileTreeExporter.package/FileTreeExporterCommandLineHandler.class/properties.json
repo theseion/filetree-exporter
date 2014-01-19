@@ -1,0 +1,14 @@
+{
+	"category" : "FileTreeExporter",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "CamilloBruni 1/19/2014 18:51",
+	"instvars" : [
+		 ],
+	"name" : "FileTreeExporterCommandLineHandler",
+	"pools" : [
+		 ],
+	"super" : "CommandLineHandler",
+	"type" : "normal" }
