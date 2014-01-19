@@ -1,0 +1,14 @@
+{
+	"category" : "ConfigurationOfFileTreeExporter",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"LastVersionLoad" ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"project" ],
+	"name" : "ConfigurationOfFileTreeExporter",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
