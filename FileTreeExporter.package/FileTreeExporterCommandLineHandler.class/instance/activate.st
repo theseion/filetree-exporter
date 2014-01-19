@@ -7,6 +7,6 @@ activate
 		ifTrue: [ ^ self listUsers ].
 		
 	(self arguments first = 'export')
-		ifFalse: [ ^ self export ].
+		ifTrue: [ ^ self export ].
 	
 	self error: 'Invalid subcommand provided'

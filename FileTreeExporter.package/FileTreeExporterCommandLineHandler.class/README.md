@@ -1,4 +1,4 @@
-Usage: [--help] [users --from=<URL>] [export --from=<URL> --to=<DIR> --user-map=<FILE>]
+Usage: [--help] [users --from=<URL>] [export --from=<URL> [--to=<DIR>] --user-map=<FILE>]
 	
 	--help    show this help message
 	users     list all users of the source repository

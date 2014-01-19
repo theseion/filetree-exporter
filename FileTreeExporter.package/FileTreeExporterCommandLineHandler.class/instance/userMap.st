@@ -1,7 +1,7 @@
 accessing
 userMap
 	| file map |
-	file := (self optionAt: 'user-map') asFileReference.
+	file := self userMapFile.
 	map := Dictionary new.
 	file readStream contents linesDo: [ :line | | tokens monticelloAuthor gitAuthor |
 		tokens := line splitOn: [ :each | each isSeparator ].

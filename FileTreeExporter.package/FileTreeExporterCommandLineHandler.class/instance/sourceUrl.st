@@ -1,3 +1,6 @@
 accessing
 sourceUrl
-	^ self optionAt: 'from' ifAbsent: [ self error: 'Missing source repository [--from]' ]
+	^ self 
+		optionAt: 'from' 
+		ifAbsent: [
+			self exitFailure: 'Missing source repository [--from]' ]
