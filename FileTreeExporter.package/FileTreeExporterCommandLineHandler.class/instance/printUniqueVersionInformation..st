@@ -1,4 +1,4 @@
-action
+action-listing
 printUniqueVersionInformation: extractBlock
 	"Collect information from all versions in the source repository.
 	Use the extractBlock to get the information string.
