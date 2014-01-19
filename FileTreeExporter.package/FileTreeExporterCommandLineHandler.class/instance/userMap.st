@@ -7,6 +7,7 @@ userMap
 	file readStream contents linesDo: [ :line | | tokens monticelloAuthor gitAuthor |
 		tokens := line splitOn: [ :each | each isSeparator ].
 		monticelloAuthor := tokens first.
-		gitAuthor := tokens allButFirst joinUsing: ' '.
-		userMap at: monticelloAuthor put: gitAuthor ].
+		gitAuthor := (tokens allButFirst joinUsing: ' ') trimBoth.
+		gitAuthor isEmpty
+			ifFalse: [ userMap at: monticelloAuthor put: gitAuthor ]].
 	^ userMap
