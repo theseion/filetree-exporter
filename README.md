@@ -17,7 +17,9 @@ pharo exporter.image filetree-exporter users --from=$MC_REPO_URL > users.txt
 
 Now you can edit the user mapping in `users.txt`, line by line with the following format:
 ~~~
+...
 MONTICELLO-USER NAME SURNAME <EMAIL>
+...
 ~~~
 
 After that you can start exporting the monticello repository
