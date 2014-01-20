@@ -28,7 +28,10 @@ After that you can start exporting the monticello repository
 pharo exporter.image filetree-exporter export --from=$MC_REPO_URL --user-map=users.txt
 ~~~
 
-Now you have a complete copy of the contents of `$MC_REPO_URL` in the local git repository under `./export-repository` which you can push for instance to github:
+Now you have a complete copy of the contents of `$MC_REPO_URL` in the local git repository under `./export-repository`.
+
+## Push the Exported Repository
+Execute the following bash commands to push the expoter Monticello versions to an empty github repository:
 ~~~
 cd export-repository
 git remote add origin git@github.com:$GITHUB_USER/$GITHUB_REPO.git
