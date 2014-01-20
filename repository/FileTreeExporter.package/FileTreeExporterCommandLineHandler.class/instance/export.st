@@ -10,8 +10,8 @@ export
 	versions withIndexDo: [ :version :index | 
 		self
 			printProgressMessage: ('Exporting ', version info name)
-			from: index
-			to: versions size.	
+			from: index + self versionSkip
+			to: versions size + self versionSkip.	
 		self stderr lf.
 		self exportVersion: version to: destination ].
 	

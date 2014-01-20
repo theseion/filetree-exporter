@@ -5,5 +5,5 @@ printUniqueVersionInformation: extractBlock
 	The printed output is sorted and duplicates removed."
 	| strings |
 	
-	strings := self versions collect: extractBlock as: Set.
+	strings := self filteredVersions collect: extractBlock as: Set.
 	self printAsSortedCollection: strings.
