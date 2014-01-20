@@ -11,8 +11,8 @@ This script does the following:
 ## Example Usage
 
 ~~~
-pharo filetree-exporter.image filetree-exporter --help
-pharo filetree-exporter.image filetree-exporter users --from=$MC_REPO_URL > users.txt
+pharo exporter.image filetree-exporter --help
+pharo exporter.image filetree-exporter users --from=$MC_REPO_URL > users.txt
 ~~~
 
 Now you can edit the user mapping in `users.txt`, line by line with the following format:
@@ -23,6 +23,6 @@ MONTICELLO-USER NAME SURNAME <EMAIL>
 After that you can start exporting the monticello repository
 
 ~~~
-pharo filetree-exporter.image filetree-exporter export --from=$MC_REPO_URL --user-map=users.txt
+pharo exporter.image filetree-exporter export --from=$MC_REPO_URL --user-map=users.txt
 ~~~
 
