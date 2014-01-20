@@ -33,7 +33,7 @@ Now you have a complete copy of the contents of `$MC_REPO_URL` in the local git 
 ## Push the Exported Repository
 Execute the following bash commands to push the expoter Monticello versions to an empty github repository:
 ```bash
-cd export-repository
+cd ./export-repository
 git remote add origin git@github.com:$GITHUB_USER/$GITHUB_REPO.git
 git push --set-upstream origin master
 ```
@@ -41,7 +41,7 @@ git push --set-upstream origin master
 If you created the github repository already with a `README.md` file, rebase your exported version on top.
 Instead of the direct `git push` command execute the following statements:
 ```bash
-cd export-repository
+cd ./export-repository
 git remote add origin git@github.com:$GITHUB_USER/$GITHUB_REPO.git
 git fetch --all
 # replay the versions of the exported repository on top of the existing remote versions
