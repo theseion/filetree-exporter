@@ -28,3 +28,20 @@ After that you can start exporting the monticello repository
 pharo exporter.image filetree-exporter export --from=$MC_REPO_URL --user-map=users.txt
 ~~~
 
+Now you have a complete copy of the contents of `$MC_REPO_URL` in the local git repository under `./export-repository` which you can push for instance to github:
+~~~
+cd export-repository
+git remote add origin git@github.com:$GITHUB_USER/$GITHUB_REPO.git
+git push --set-upstream origin master
+~~~
+
+If you created the github repository already with a `README.md` file, rebase your exported version on top.
+Instead of the direct `git push` command execute the following statements:
+~~~
+cd export-repository
+git remote add origin git@github.com:$GITHUB_USER/$GITHUB_REPO.git
+git fetch --all
+# replay the versions of the exported repository on top of the existing remote versions
+git rebase origin/master
+git push --set-upstream origin master
+~~~
