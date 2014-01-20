@@ -1,9 +1,18 @@
 activation
 activate
+	| subCommand |
 	self activateHelp
 		ifTrue: [  ^ self ].
 	
-	self loadSourceFiles: (self commandLine allFilesWithExtension: 'st').
-	self installSourceFiles.
+	subCommand := self arguments first.
 	
-	self end
+	(subCommand = 'users')
+		ifTrue: [ ^ self listUsers ].
+		
+	(subCommand = 'packages')
+		ifTrue: [ ^ self listPackages].
+		
+	(subCommand = 'export')
+		ifTrue: [ ^ self export ].
+	
+	self error: 'Invalid subcommand provided'
