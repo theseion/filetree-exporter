@@ -1,15 +1,14 @@
 {
-	"category" : "FileTreeExporter",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "CamilloBruni 1/20/2014 14:50",
+	"super" : "CommandLineHandler",
+	"category" : "FileTreeExporter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"gofer",
-		"userMap" ],
+		"userMap"
+	],
 	"name" : "FileTreeExporterCommandLineHandler",
-	"pools" : [
-		 ],
-	"super" : "CommandLineHandler",
-	"type" : "normal" }
+	"type" : "normal"
+}
