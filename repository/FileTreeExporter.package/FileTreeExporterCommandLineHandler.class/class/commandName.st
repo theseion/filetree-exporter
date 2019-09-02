@@ -1,3 +1,0 @@
-accessing
-commandName
-	^ 'filetree-exporter'

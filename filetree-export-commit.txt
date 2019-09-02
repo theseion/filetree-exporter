@@ -1,0 +1,1 @@
+Fixed version definition for 1.0.3
