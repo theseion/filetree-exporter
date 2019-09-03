@@ -11,9 +11,9 @@ BaselineOfFileTreeExporter >> baseline: spec [
 		for: #common
 		do: [
 			spec
-				project: 'OSProcess'
+				baseline: 'OSProcess'
 				with: [
-					spec repository: 'githu://dtlewis290/OSProcess-Tonel:master' ].
+					spec repository: 'github://dtlewis290/OSProcess-Tonel:master' ].
 			
 			spec
 				package: 'FileTreeExporter' with:[

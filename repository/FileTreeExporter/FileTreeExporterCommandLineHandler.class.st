@@ -8,9 +8,12 @@ Usage:
 	users     list all users of the source repository
 	packages  list all packages in the source repository
 	export    export the source repository to the git repository in <DIR>
-	<URL>     url for a monticello source repository
+	<URL>     url for a monticello source repository,
+	          e.g. http://smalltalkhub.com/mc/UserName/ProjectName/main
 	<DIR>     git repository directory to which the source repository is exported to.
 	<FILE>    a line separate file wich maps the monticello users to full git users.
+	          format: <Monticello user> <Git user>
+	          e.g.: HomerSimpson Homer Simpson <homer@nuke.springfield.com>
 	<REGEX>   A regular expression used to filter packages the are exported
 	<OFFSET>  An integer indicating how many versions should be skipped
 "
@@ -21,7 +24,7 @@ Class {
 		'gofer',
 		'userMap'
 	],
-	#category : 'FileTreeExporter'
+	#category : #FileTreeExporter
 }
 
 { #category : #accessing }
