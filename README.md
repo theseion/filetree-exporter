@@ -1,7 +1,7 @@
 Monticello to Filetree Exporter
 ===============================
 
-This is a [Pharo](https://github.com/pharo-project/pharo) command line tool to help migrating existing monticello repositories to git using [filetree](https://github.com/dalehenrich/filetree).
+This is a [Pharo](https://pharo.org) command line tool to help migrating existing monticello repositories to git using [filetree](https://github.com/dalehenrich/filetree).
 
 This script does the following:
 - exports all Monticello versions of a given repository in chronological order,
